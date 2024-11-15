@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\I_O.ncd
+OUTFILE=C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\I_O.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816
+LICENSE=WebPack
+USER_INFO=211646583_0_0_354

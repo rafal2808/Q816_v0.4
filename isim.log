@@ -1,0 +1,2 @@
+ISim log file
+Running: D:\Elektronika\FPGA\projekty\xilinx\cpu\DCEQ816zip\DCEQ816\ALU_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Elektronika/FPGA/projekty/xilinx/cpu/DCEQ816zip/DCEQ816/ALU_test_isim_beh.wdb 

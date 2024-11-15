@@ -1,0 +1,138 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml I_O.twx I_O.ncd -o I_O.twr I_O.pcf
+
+Design file:              I_O.ncd
+Physical constraint file: I_O.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock IO_ms<1>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+IO_bus<0>   |   -0.071(R)|      FAST  |    1.336(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_bus<1>   |   -0.131(R)|      FAST  |    1.396(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_bus<2>   |   -0.162(R)|      FAST  |    1.459(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_bus<3>   |   -0.163(R)|      FAST  |    1.460(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_bus<4>   |   -0.102(R)|      FAST  |    1.399(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_bus<5>   |   -0.067(R)|      FAST  |    1.332(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_bus<6>   |   -0.098(R)|      FAST  |    1.395(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_bus<7>   |   -0.126(R)|      FAST  |    1.391(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+IO_ms<0>    |    6.818(R)|      SLOW  |    0.771(R)|      SLOW  |IO_ms_1_BUFGP     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock IO_ms<2>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+IO_bus<0>   |    1.470(R)|      SLOW  |   -0.012(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_bus<1>   |    2.783(R)|      SLOW  |   -1.253(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_bus<2>   |    2.123(R)|      SLOW  |   -0.630(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_bus<3>   |    2.651(R)|      SLOW  |   -1.134(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_bus<4>   |    2.393(R)|      SLOW  |   -0.885(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_bus<5>   |    1.419(R)|      SLOW  |    0.033(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_bus<6>   |    2.317(R)|      SLOW  |   -0.812(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_bus<7>   |    0.316(R)|      FAST  |    1.103(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+IO_ms<0>    |    6.874(R)|      SLOW  |   -1.360(R)|      SLOW  |IO_ms_2_BUFGP     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock IO_ms<3>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+IO_in<0>    |    0.295(R)|      FAST  |    1.124(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_in<1>    |   -0.173(R)|      FAST  |    1.470(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_in<2>    |   -0.140(R)|      FAST  |    1.405(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_in<3>    |   -0.088(R)|      FAST  |    1.353(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_in<4>    |   -0.142(R)|      FAST  |    1.407(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_in<5>    |   -0.087(R)|      FAST  |    1.352(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_in<6>    |   -0.145(R)|      FAST  |    1.410(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_in<7>    |   -0.089(R)|      FAST  |    1.354(R)|      SLOW  |IO_ms_3_BUFGP     |   0.000|
+IO_ms<0>    |    7.414(R)|      SLOW  |   -2.416(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock IO_ms<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+IO_out3<0>  |         9.722(R)|      SLOW  |         5.362(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+IO_out3<1>  |        10.302(R)|      SLOW  |         5.705(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+IO_out3<2>  |         9.896(R)|      SLOW  |         5.460(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+IO_out3<3>  |         9.166(R)|      SLOW  |         5.016(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+IO_out3<4>  |         9.301(R)|      SLOW  |         5.081(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+IO_out3<5>  |         9.179(R)|      SLOW  |         4.989(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+IO_out3<6>  |         9.161(R)|      SLOW  |         5.002(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+IO_out3<7>  |         9.315(R)|      SLOW  |         5.138(R)|      FAST  |IO_ms_1_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock IO_ms<2> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+IO_out2<0>  |         6.350(R)|      SLOW  |         2.939(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+IO_out2<1>  |         6.350(R)|      SLOW  |         2.939(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+IO_out2<2>  |         6.351(R)|      SLOW  |         2.940(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+IO_out2<3>  |         6.350(R)|      SLOW  |         2.939(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+IO_out2<4>  |         6.408(R)|      SLOW  |         2.997(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+IO_out2<5>  |         6.348(R)|      SLOW  |         2.937(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+IO_out2<6>  |         6.408(R)|      SLOW  |         2.997(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+IO_out2<7>  |         6.406(R)|      SLOW  |         2.995(R)|      FAST  |IO_ms_2_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock IO_ms<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+IO_out1<0>  |         6.368(R)|      SLOW  |         2.957(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+IO_out1<1>  |         8.987(R)|      SLOW  |         4.768(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+IO_out1<2>  |         8.047(R)|      SLOW  |         4.207(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+IO_out1<3>  |         7.995(R)|      SLOW  |         4.155(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+IO_out1<4>  |         9.155(R)|      SLOW  |         4.872(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+IO_out1<5>  |         7.994(R)|      SLOW  |         4.154(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+IO_out1<6>  |         8.961(R)|      SLOW  |         4.754(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+IO_out1<7>  |         9.284(R)|      SLOW  |         4.912(R)|      FAST  |IO_ms_3_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+
+Analysis completed Tue May 28 20:45:47 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 211 MB
+
+
+
