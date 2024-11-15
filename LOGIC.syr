@@ -1,0 +1,900 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: LOGIC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LOGIC.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LOGIC"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : LOGIC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\LOGIC.vhd" into library work
+Parsing entity <LOGIC>.
+Parsing architecture <Behavioral> of entity <logic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <LOGIC> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <LOGIC>.
+    Related source file is "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\LOGIC.vhd".
+WARNING:Xst:647 - Input <Logic_bus<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <PC_REG<3>>.
+    Found 1-bit register for signal <PC_REG<2>>.
+    Found 1-bit register for signal <PC_REG<1>>.
+    Found 1-bit register for signal <PC_REG<0>>.
+    Found 8-bit register for signal <Logic_db>.
+    Found 5-bit register for signal <IR_out>.
+    Found 2-bit register for signal <counter>.
+    Found 1-bit register for signal <PC_out<3>>.
+    Found 1-bit register for signal <PC_out<2>>.
+    Found 1-bit register for signal <PC_out<1>>.
+    Found 1-bit register for signal <PC_out<0>>.
+    Found 4-bit adder for signal <PC_out[3]_GND_6_o_add_0_OUT> created at line 71.
+    Found 2-bit adder for signal <counter[1]_GND_6_o_add_61_OUT> created at line 144.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_decoder<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cou_dec<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cou_dec<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cou_dec<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred  24 Latch(s).
+	inferred  39 Multiplexer(s).
+Unit <LOGIC> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 11
+ 1-bit register                                        : 8
+ 2-bit register                                        : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 24
+ 1-bit latch                                           : 24
+# Multiplexers                                         : 39
+ 1-bit 2-to-1 multiplexer                              : 37
+ 4-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <LOGIC>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <LOGIC> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+# Multiplexers                                         : 39
+ 1-bit 2-to-1 multiplexer                              : 37
+ 4-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    PC_out_1 in unit <LOGIC>
+    PC_out_2 in unit <LOGIC>
+    PC_out_0 in unit <LOGIC>
+    PC_out_3 in unit <LOGIC>
+    IR_decoder_0 in unit <LOGIC>
+    IR_decoder_16 in unit <LOGIC>
+    IR_decoder_17 in unit <LOGIC>
+    IR_decoder_18 in unit <LOGIC>
+    IR_decoder_19 in unit <LOGIC>
+    IR_decoder_21 in unit <LOGIC>
+    IR_decoder_1 in unit <LOGIC>
+    IR_decoder_20 in unit <LOGIC>
+    IR_decoder_2 in unit <LOGIC>
+    IR_decoder_3 in unit <LOGIC>
+    IR_decoder_4 in unit <LOGIC>
+    IR_decoder_5 in unit <LOGIC>
+    IR_decoder_6 in unit <LOGIC>
+    IR_decoder_7 in unit <LOGIC>
+    cou_dec_2 in unit <LOGIC>
+    cou_dec_0 in unit <LOGIC>
+    cou_dec_1 in unit <LOGIC>
+    IR_decoder_8 in unit <LOGIC>
+    IR_decoder_9 in unit <LOGIC>
+    IR_decoder_10 in unit <LOGIC>
+    IR_decoder_12 in unit <LOGIC>
+    IR_decoder_14 in unit <LOGIC>
+    IR_decoder_15 in unit <LOGIC>
+    IR_decoder_13 in unit <LOGIC>
+
+
+Optimizing unit <LOGIC> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LOGIC, actual ratio is 2.
+Latch cou_dec_1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : LOGIC.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 62
+#      INV                         : 2
+#      LUT2                        : 17
+#      LUT3                        : 13
+#      LUT5                        : 24
+#      LUT6                        : 5
+#      VCC                         : 1
+# FlipFlops/Latches                : 56
+#      FDC                         : 4
+#      FDP                         : 4
+#      FDRE                        : 19
+#      LD                          : 25
+#      LDC                         : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 55
+#      IBUF                        : 23
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              37  out of  11440     0%  
+ Number of Slice LUTs:                   61  out of   5720     1%  
+    Number used as Logic:                61  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     69
+   Number with an unused Flip Flop:      32  out of     69    46%  
+   Number with an unused LUT:             8  out of     69    11%  
+   Number of fully used LUT-FF pairs:    29  out of     69    42%  
+   Number of unique control sets:        17
+
+IO Utilization: 
+ Number of IOs:                          59
+ Number of bonded IOBs:                  55  out of    102    53%  
+    IOB Flip Flops/Latches:              19
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                   | Clock buffer(FF name)  | Load  |
+---------------------------------------------------------------+------------------------+-------+
+PC_Lclk(PC_Lclk1:O)                                            | NONE(*)(PC_REG_3)      | 4     |
+cou_dec_0                                                      | NONE(Logic_db_0)       | 13    |
+Logic_clk                                                      | IBUF+BUFG              | 2     |
+IR_decoder_0_G(IR_decoder_13_G:O)                              | BUFG(*)(IR_decoder_13) | 21    |
+cou_dec_0_G(cou_dec_0_G:O)                                     | NONE(*)(cou_dec_1)     | 4     |
+GND_6_o_PC_REG[3]_MUX_27_o(Mmux_GND_6_o_PC_REG[3]_MUX_27_o11:O)| NONE(*)(PC_out_3_LDC)  | 1     |
+cou_dec_2                                                      | NONE(PC_out_3_C_3)     | 8     |
+GND_6_o_PC_REG[0]_MUX_30_o(Mmux_GND_6_o_PC_REG[0]_MUX_30_o11:O)| NONE(*)(PC_out_0_LDC)  | 1     |
+GND_6_o_PC_REG[2]_MUX_28_o(Mmux_GND_6_o_PC_REG[2]_MUX_28_o11:O)| NONE(*)(PC_out_2_LDC)  | 1     |
+GND_6_o_PC_REG[1]_MUX_29_o(Mmux_GND_6_o_PC_REG[1]_MUX_29_o11:O)| NONE(*)(PC_out_1_LDC)  | 1     |
+---------------------------------------------------------------+------------------------+-------+
+(*) These 7 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.520ns (Maximum Frequency: 396.810MHz)
+   Minimum input arrival time before clock: 4.868ns
+   Maximum output required time after clock: 5.404ns
+   Maximum combinational path delay: 6.300ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Logic_clk'
+  Clock period: 2.078ns (frequency: 481.325MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.078ns (Levels of Logic = 1)
+  Source:            counter_0 (FF)
+  Destination:       counter_0 (FF)
+  Source Clock:      Logic_clk rising
+  Destination Clock: Logic_clk rising
+
+  Data Path: counter_0 to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.447   0.744  counter_0 (counter_0)
+     INV:I->O              1   0.206   0.579  Result<0>1_INV_0 (Result<0>)
+     FDRE:D                    0.102          counter_0
+    ----------------------------------------
+    Total                      2.078ns (0.755ns logic, 1.323ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cou_dec_2'
+  Clock period: 2.520ns (frequency: 396.810MHz)
+  Total number of paths / destination ports: 40 / 8
+-------------------------------------------------------------------------
+Delay:               2.520ns (Levels of Logic = 2)
+  Source:            PC_out_2_P_2 (FF)
+  Destination:       PC_out_3_C_3 (FF)
+  Source Clock:      cou_dec_2 rising
+  Destination Clock: cou_dec_2 rising
+
+  Data Path: PC_out_2_P_2 to PC_out_3_C_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.447   0.684  PC_out_2_P_2 (PC_out_2_P_2)
+     LUT3:I1->O            3   0.203   0.879  PC_out_21 (PC_out_2)
+     LUT6:I3->O            2   0.205   0.000  Mmux_PC_out[3]_PC_out[3]_mux_2_OUT41 (PC_out[3]_PC_out[3]_mux_2_OUT<3>)
+     FDC:D                     0.102          PC_out_3_C_3
+    ----------------------------------------
+    Total                      2.520ns (0.957ns logic, 1.563ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PC_Lclk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.159ns (Levels of Logic = 2)
+  Source:            Logic_reset (PAD)
+  Destination:       PC_REG_3 (FF)
+  Destination Clock: PC_Lclk rising
+
+  Data Path: Logic_reset to PC_REG_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.132  Logic_reset_IBUF (Logic_reset_IBUF)
+     LUT2:I0->O           24   0.203   1.172  Logic_ms<19>1 (Logic_ms_4_OBUF)
+     FDRE:R                    0.430          PC_REG_3
+    ----------------------------------------
+    Total                      4.159ns (1.855ns logic, 2.304ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cou_dec_0'
+  Total number of paths / destination ports: 39 / 39
+-------------------------------------------------------------------------
+Offset:              4.159ns (Levels of Logic = 2)
+  Source:            Logic_reset (PAD)
+  Destination:       Logic_db_0 (FF)
+  Destination Clock: cou_dec_0 rising
+
+  Data Path: Logic_reset to Logic_db_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.132  Logic_reset_IBUF (Logic_reset_IBUF)
+     LUT2:I0->O           24   0.203   1.172  Logic_ms<19>1 (Logic_ms_4_OBUF)
+     FDRE:R                    0.430          Logic_db_0
+    ----------------------------------------
+    Total                      4.159ns (1.855ns logic, 2.304ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Logic_clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.393ns (Levels of Logic = 2)
+  Source:            Logic_reset (PAD)
+  Destination:       counter_0 (FF)
+  Destination Clock: Logic_clk rising
+
+  Data Path: Logic_reset to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.027  Logic_reset_IBUF (Logic_reset_IBUF)
+     INV:I->O              2   0.206   0.616  Logic_reset_inv1_INV_0 (Logic_reset_inv)
+     FDRE:CE                   0.322          counter_0
+    ----------------------------------------
+    Total                      3.393ns (1.750ns logic, 1.643ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GND_6_o_PC_REG[3]_MUX_27_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.603ns (Levels of Logic = 2)
+  Source:            Logic_reset (PAD)
+  Destination:       PC_out_3_LDC (LATCH)
+  Destination Clock: GND_6_o_PC_REG[3]_MUX_27_o falling
+
+  Data Path: Logic_reset to PC_out_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.132  Logic_reset_IBUF (Logic_reset_IBUF)
+     LUT3:I1->O            2   0.203   0.616  GND_6_o_PC_REG[3]_MUX_27_o_inv1 (GND_6_o_PC_REG[3]_MUX_27_o_inv)
+     LDC:CLR                   0.430          PC_out_3_LDC
+    ----------------------------------------
+    Total                      3.603ns (1.855ns logic, 1.748ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cou_dec_2'
+  Total number of paths / destination ports: 48 / 16
+-------------------------------------------------------------------------
+Offset:              4.868ns (Levels of Logic = 4)
+  Source:            Logic_sts<2> (PAD)
+  Destination:       PC_out_3_C_3 (FF)
+  Destination Clock: cou_dec_2 rising
+
+  Data Path: Logic_sts<2> to PC_out_3_C_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  Logic_sts_2_IBUF (Logic_sts_2_IBUF)
+     LUT6:I0->O            1   0.203   0.944  PCload_INV_10_o_SW0 (N4)
+     LUT6:I0->O            4   0.203   1.048  PCload_INV_10_o (PCload_INV_10_o)
+     LUT6:I0->O            2   0.203   0.000  Mmux_PC_out[3]_PC_out[3]_mux_2_OUT41 (PC_out[3]_PC_out[3]_mux_2_OUT<3>)
+     FDC:D                     0.102          PC_out_3_C_3
+    ----------------------------------------
+    Total                      4.868ns (1.933ns logic, 2.935ns route)
+                                       (39.7% logic, 60.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GND_6_o_PC_REG[0]_MUX_30_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.603ns (Levels of Logic = 2)
+  Source:            Logic_reset (PAD)
+  Destination:       PC_out_0_LDC (LATCH)
+  Destination Clock: GND_6_o_PC_REG[0]_MUX_30_o falling
+
+  Data Path: Logic_reset to PC_out_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.132  Logic_reset_IBUF (Logic_reset_IBUF)
+     LUT3:I1->O            2   0.203   0.616  GND_6_o_PC_REG[0]_MUX_30_o_inv1 (GND_6_o_PC_REG[0]_MUX_30_o_inv)
+     LDC:CLR                   0.430          PC_out_0_LDC
+    ----------------------------------------
+    Total                      3.603ns (1.855ns logic, 1.748ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GND_6_o_PC_REG[2]_MUX_28_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.603ns (Levels of Logic = 2)
+  Source:            Logic_reset (PAD)
+  Destination:       PC_out_2_LDC (LATCH)
+  Destination Clock: GND_6_o_PC_REG[2]_MUX_28_o falling
+
+  Data Path: Logic_reset to PC_out_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.132  Logic_reset_IBUF (Logic_reset_IBUF)
+     LUT3:I1->O            2   0.203   0.616  GND_6_o_PC_REG[2]_MUX_28_o_inv1 (GND_6_o_PC_REG[2]_MUX_28_o_inv)
+     LDC:CLR                   0.430          PC_out_2_LDC
+    ----------------------------------------
+    Total                      3.603ns (1.855ns logic, 1.748ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GND_6_o_PC_REG[1]_MUX_29_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.603ns (Levels of Logic = 2)
+  Source:            Logic_reset (PAD)
+  Destination:       PC_out_1_LDC (LATCH)
+  Destination Clock: GND_6_o_PC_REG[1]_MUX_29_o falling
+
+  Data Path: Logic_reset to PC_out_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.132  Logic_reset_IBUF (Logic_reset_IBUF)
+     LUT3:I1->O            2   0.203   0.616  GND_6_o_PC_REG[1]_MUX_29_o_inv1 (GND_6_o_PC_REG[1]_MUX_29_o_inv)
+     LDC:CLR                   0.430          PC_out_1_LDC
+    ----------------------------------------
+    Total                      3.603ns (1.855ns logic, 1.748ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GND_6_o_PC_REG[3]_MUX_27_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.698ns (Levels of Logic = 2)
+  Source:            PC_out_3_LDC (LATCH)
+  Destination:       Logic_roma<3> (PAD)
+  Source Clock:      GND_6_o_PC_REG[3]_MUX_27_o falling
+
+  Data Path: PC_out_3_LDC to Logic_roma<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.808  PC_out_3_LDC (PC_out_3_LDC)
+     LUT3:I0->O            2   0.205   0.616  PC_out_31 (PC_out_3)
+     OBUF:I->O                 2.571          Logic_roma_3_OBUF (Logic_roma<3>)
+    ----------------------------------------
+    Total                      4.698ns (3.274ns logic, 1.424ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cou_dec_2'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              4.625ns (Levels of Logic = 2)
+  Source:            PC_out_0_P_0 (FF)
+  Destination:       Logic_roma<0> (PAD)
+  Source Clock:      cou_dec_2 rising
+
+  Data Path: PC_out_0_P_0 to Logic_roma<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.447   0.721  PC_out_0_P_0 (PC_out_0_P_0)
+     LUT3:I1->O            4   0.203   0.683  PC_out_01 (PC_out_0)
+     OBUF:I->O                 2.571          Logic_roma_0_OBUF (Logic_roma<0>)
+    ----------------------------------------
+    Total                      4.625ns (3.221ns logic, 1.404ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GND_6_o_PC_REG[2]_MUX_28_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.732ns (Levels of Logic = 2)
+  Source:            PC_out_2_LDC (LATCH)
+  Destination:       Logic_roma<2> (PAD)
+  Source Clock:      GND_6_o_PC_REG[2]_MUX_28_o falling
+
+  Data Path: PC_out_2_LDC to Logic_roma<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.808  PC_out_2_LDC (PC_out_2_LDC)
+     LUT3:I0->O            3   0.205   0.650  PC_out_21 (PC_out_2)
+     OBUF:I->O                 2.571          Logic_roma_2_OBUF (Logic_roma<2>)
+    ----------------------------------------
+    Total                      4.732ns (3.274ns logic, 1.458ns route)
+                                       (69.2% logic, 30.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GND_6_o_PC_REG[1]_MUX_29_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.764ns (Levels of Logic = 2)
+  Source:            PC_out_1_LDC (LATCH)
+  Destination:       Logic_roma<1> (PAD)
+  Source Clock:      GND_6_o_PC_REG[1]_MUX_29_o falling
+
+  Data Path: PC_out_1_LDC to Logic_roma<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.808  PC_out_1_LDC (PC_out_1_LDC)
+     LUT3:I0->O            4   0.205   0.683  PC_out_11 (PC_out_1)
+     OBUF:I->O                 2.571          Logic_roma_1_OBUF (Logic_roma<1>)
+    ----------------------------------------
+    Total                      4.764ns (3.274ns logic, 1.490ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GND_6_o_PC_REG[0]_MUX_30_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.802ns (Levels of Logic = 2)
+  Source:            PC_out_0_LDC (LATCH)
+  Destination:       Logic_roma<0> (PAD)
+  Source Clock:      GND_6_o_PC_REG[0]_MUX_30_o falling
+
+  Data Path: PC_out_0_LDC to Logic_roma<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  PC_out_0_LDC (PC_out_0_LDC)
+     LUT3:I0->O            4   0.205   0.683  PC_out_01 (PC_out_0)
+     OBUF:I->O                 2.571          Logic_roma_0_OBUF (Logic_roma<0>)
+    ----------------------------------------
+    Total                      4.802ns (3.274ns logic, 1.528ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'IR_decoder_0_G'
+  Total number of paths / destination ports: 24 / 18
+-------------------------------------------------------------------------
+Offset:              5.404ns (Levels of Logic = 2)
+  Source:            IR_decoder_20 (LATCH)
+  Destination:       Logic_ms<19> (PAD)
+  Source Clock:      IR_decoder_0_G falling
+
+  Data Path: IR_decoder_20 to Logic_ms<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              14   0.498   0.958  IR_decoder_20 (IR_decoder_20)
+     LUT2:I1->O           24   0.205   1.172  Logic_ms<19>1 (Logic_ms_4_OBUF)
+     OBUF:I->O                 2.571          Logic_ms_19_OBUF (Logic_ms<19>)
+    ----------------------------------------
+    Total                      5.404ns (3.274ns logic, 2.130ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cou_dec_0_G'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.052ns (Levels of Logic = 2)
+  Source:            cou_dec_1 (LATCH)
+  Destination:       Logic_ms<3> (PAD)
+  Source Clock:      cou_dec_0_G falling
+
+  Data Path: cou_dec_1 to Logic_ms<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              10   0.498   1.201  cou_dec_1 (cou_dec_1)
+     LUT5:I0->O            1   0.203   0.579  Logic_ms<3>1 (Logic_ms_3_OBUF)
+     OBUF:I->O                 2.571          Logic_ms_3_OBUF (Logic_ms<3>)
+    ----------------------------------------
+    Total                      5.052ns (3.272ns logic, 1.780ns route)
+                                       (64.8% logic, 35.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cou_dec_0'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Logic_db_7 (FF)
+  Destination:       Logic_db<7> (PAD)
+  Source Clock:      cou_dec_0 rising
+
+  Data Path: Logic_db_7 to Logic_db<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.579  Logic_db_7 (Logic_db_7)
+     OBUF:I->O                 2.571          Logic_db_7_OBUF (Logic_db<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               6.300ns (Levels of Logic = 3)
+  Source:            Logic_reset (PAD)
+  Destination:       Logic_ms<19> (PAD)
+
+  Data Path: Logic_reset to Logic_ms<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.132  Logic_reset_IBUF (Logic_reset_IBUF)
+     LUT2:I0->O           24   0.203   1.172  Logic_ms<19>1 (Logic_ms_4_OBUF)
+     OBUF:I->O                 2.571          Logic_ms_19_OBUF (Logic_ms<19>)
+    ----------------------------------------
+    Total                      6.300ns (3.996ns logic, 2.304ns route)
+                                       (63.4% logic, 36.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock GND_6_o_PC_REG[0]_MUX_30_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IR_decoder_0_G |         |         |    2.935|         |
+PC_Lclk        |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GND_6_o_PC_REG[1]_MUX_29_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IR_decoder_0_G |         |         |    2.935|         |
+PC_Lclk        |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GND_6_o_PC_REG[2]_MUX_28_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IR_decoder_0_G |         |         |    2.935|         |
+PC_Lclk        |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GND_6_o_PC_REG[3]_MUX_27_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IR_decoder_0_G |         |         |    2.935|         |
+PC_Lclk        |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IR_decoder_0_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cou_dec_0      |         |         |    2.165|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Logic_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Logic_clk      |    2.078|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PC_Lclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IR_decoder_0_G |         |    3.263|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cou_dec_0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IR_decoder_0_G |         |    3.263|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cou_dec_0_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Logic_clk      |         |         |    1.536|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cou_dec_2
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+GND_6_o_PC_REG[0]_MUX_30_o|         |    2.539|         |         |
+GND_6_o_PC_REG[1]_MUX_29_o|         |    2.603|         |         |
+GND_6_o_PC_REG[2]_MUX_28_o|         |    2.697|         |         |
+GND_6_o_PC_REG[3]_MUX_27_o|         |    2.680|         |         |
+IR_decoder_0_G            |         |    4.124|         |         |
+PC_Lclk                   |    2.316|         |         |         |
+cou_dec_0_G               |         |    2.913|         |         |
+cou_dec_2                 |    2.520|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.51 secs
+ 
+--> 
+
+Total memory usage is 261784 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
