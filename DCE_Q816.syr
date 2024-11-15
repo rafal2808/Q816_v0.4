@@ -1,0 +1,615 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: DCE_Q816.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DCE_Q816.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DCE_Q816"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : DCE_Q816
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\ROM.vhd" into library work
+Parsing entity <ROM>.
+Parsing architecture <Behavioral> of entity <rom>.
+Parsing VHDL file "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\LOGIC.vhd" into library work
+Parsing entity <LOGIC>.
+Parsing architecture <Behavioral> of entity <logic>.
+Parsing VHDL file "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\I_O.vhd" into library work
+Parsing entity <I_O>.
+Parsing architecture <Behavioral> of entity <i_o>.
+Parsing VHDL file "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\CORE_MS2.vhd" into library work
+Parsing entity <CORE_MS2>.
+Parsing architecture <Behavioral> of entity <core_ms2>.
+Parsing VHDL file "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\DCE_Q816.vhd" into library work
+Parsing entity <DCE_Q816>.
+Parsing architecture <Behavioral> of entity <dce_q816>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <DCE_Q816> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CORE_MS2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALU> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <I_O> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <LOGIC> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ROM> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\DCE_Q816.vhd" Line 76: Net <S3[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DCE_Q816>.
+    Related source file is "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\DCE_Q816.vhd".
+WARNING:Xst:653 - Signal <S3> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <S5>.
+    Found 22-bit register for signal <clock1>.
+    Found 22-bit adder for signal <clock1[21]_GND_6_o_add_0_OUT> created at line 139.
+    Found 1-bit 25-to-1 multiplexer for signal <_n0095> created at line 83.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <DCE_Q816> synthesized.
+
+Synthesizing Unit <CORE_MS2>.
+    Related source file is "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\CORE_MS2.vhd".
+    Found 8-bit register for signal <Bout>.
+    Found 4-bit register for signal <Cout>.
+    Found 4-bit register for signal <MS2_STS>.
+    Found 8-bit register for signal <Aout>.
+    Found 8-bit 4-to-1 multiplexer for signal <MUXout> created at line 58.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <CORE_MS2> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\ALU.vhd".
+        N = 1
+    Found 8-bit adder for signal <A[7]_GND_8_o_add_0_OUT> created at line 32.
+    Found 8-bit adder for signal <A[7]_B[7]_add_1_OUT> created at line 33.
+    Found 9-bit adder for signal <tmp> created at line 69.
+    Found 8-bit subtractor for signal <GND_8_o_GND_8_o_sub_3_OUT<7:0>> created at line 34.
+    Found 8-bit 16-to-1 multiplexer for signal <ALU_out> created at line 30.
+    Found 8-bit comparator equal for signal <STS_out<2>> created at line 52
+    Found 8-bit comparator greater for signal <STS_out<1>> created at line 57
+    Found 8-bit comparator greater for signal <STS_out<0>> created at line 62
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  15 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <I_O>.
+    Related source file is "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\I_O.vhd".
+    Found 8-bit register for signal <IO_out2>.
+    Found 8-bit register for signal <IO_out3>.
+    Found 8-bit register for signal <IO_out1>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <I_O> synthesized.
+
+Synthesizing Unit <LOGIC>.
+    Related source file is "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\LOGIC.vhd".
+WARNING:Xst:647 - Input <Logic_bus<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <PC_REG<3>>.
+    Found 1-bit register for signal <PC_REG<2>>.
+    Found 1-bit register for signal <PC_REG<1>>.
+    Found 1-bit register for signal <PC_REG<0>>.
+    Found 8-bit register for signal <Logic_db>.
+    Found 1-bit register for signal <PC_out<3>>.
+    Found 1-bit register for signal <PC_out<2>>.
+    Found 1-bit register for signal <PC_out<1>>.
+    Found 1-bit register for signal <PC_out<0>>.
+    Found 4-bit adder for signal <PC_out[3]_PC_out[3]_mux_1_OUT> created at line 72.
+    WARNING:Xst:2404 -  FFs/Latches <cou_dec<2:0>> (without init value) have a constant value of 0 in block <LOGIC>.
+    WARNING:Xst:2404 -  FFs/Latches <IR_decoder<21:0>> (without init value) have a constant value of 0 in block <LOGIC>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <LOGIC> synthesized.
+
+Synthesizing Unit <ROM>.
+    Related source file is "C:\Users\ja\Desktop\work\FPGA\projekty\DCEQ816\ROM.vhd".
+WARNING:Xst:2999 - Signal 'ROM', unconnected in block 'ROM', is tied to its initial value.
+    Found 16x13-bit single-port Read Only RAM <Mram_ROM> for signal <ROM>.
+    Found 13-bit register for signal <ROM_DATA_OUT>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  13 D-type flip-flop(s).
+Unit <ROM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x13-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 4
+ 22-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 19
+ 1-bit register                                        : 8
+ 13-bit register                                       : 1
+ 22-bit register                                       : 1
+ 4-bit register                                        : 2
+ 8-bit register                                        : 7
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 25-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 14
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <IO_out2_6> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out2_7> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Aout_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_REG_3> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_REG_2> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_REG_1> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_REG_0> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_0> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_1> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_2> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_3> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_4> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_5> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_6> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Logic_db_7> (without init value) has a constant value of 0 in block <U3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_0> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_1> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_2> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_3> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_4> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_5> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_6> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out3_7> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_0> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_1> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_2> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_3> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out2_5> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out2_4> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out2_3> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out2_2> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out2_1> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out2_0> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_7> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_6> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_5> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IO_out1_4> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Cout_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Cout_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Cout_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Cout_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Bout_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ROM_DATA_OUT_0> of sequential type is unconnected in block <U5>.
+WARNING:Xst:2677 - Node <ROM_DATA_OUT_1> of sequential type is unconnected in block <U5>.
+WARNING:Xst:2677 - Node <ROM_DATA_OUT_2> of sequential type is unconnected in block <U5>.
+WARNING:Xst:2677 - Node <ROM_DATA_OUT_3> of sequential type is unconnected in block <U5>.
+WARNING:Xst:2677 - Node <ROM_DATA_OUT_4> of sequential type is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_5> is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_6> is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_7> is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_8> is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_9> is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_10> is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_11> is unconnected in block <U5>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <ROM_DATA_OUT_12> is unconnected in block <U5>.
+WARNING:Xst:1290 - Hierarchical block <U5> is unconnected in block <DCE_Q816>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <U1> is unconnected in block <DCE_Q816>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <DCE_Q816>.
+The following registers are absorbed into counter <clock1>: 1 register on signal <clock1>.
+Unit <DCE_Q816> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM>.
+INFO:Xst:3231 - The small RAM <Mram_ROM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 13-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ROM_ADDR>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ROM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x13-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 1
+ 22-bit up counter                                     : 1
+# Registers                                            : 85
+ Flip-Flops                                            : 85
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 25-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 14
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <PC_REG_3> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_REG_2> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_REG_1> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_REG_0> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_0> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_1> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_2> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_3> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_4> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_5> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_6> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Logic_db_7> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ROM_DATA_OUT_5> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_OUT_6> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_OUT_7> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_OUT_10> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_OUT_11> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ROM_DATA_OUT_12> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_out_3> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_out_2> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_out_1> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PC_out_0> (without init value) has a constant value of 0 in block <LOGIC>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ROM_DATA_OUT_2> in Unit <ROM> is equivalent to the following FF/Latch, which will be removed : <ROM_DATA_OUT_4> 
+INFO:Xst:2261 - The FF/Latch <ROM_DATA_OUT_8> in Unit <ROM> is equivalent to the following FF/Latch, which will be removed : <ROM_DATA_OUT_9> 
+WARNING:Xst:2973 - All outputs of instance <U5> of block <ROM> are unconnected in block <DCE_Q816>. Underlying logic will be removed.
+WARNING:Xst:2677 - Node <S5_0> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <S5_1> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <S5_2> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <S5_3> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <S5_4> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <S5_5> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <S5_6> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <S5_7> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_0> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_1> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_2> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_3> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_4> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_5> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_6> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_7> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_8> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_9> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_10> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_11> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_12> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_13> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_14> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_15> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_16> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_17> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_18> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_19> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_20> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <clock1_21> of sequential type is unconnected in block <DCE_Q816>.
+
+Optimizing unit <DCE_Q816> ...
+
+Optimizing unit <I_O> ...
+
+Optimizing unit <ROM> ...
+
+Optimizing unit <CORE_MS2> ...
+
+Optimizing unit <ALU> ...
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_3> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_2> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_1> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_0> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Bout_6> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Bout_5> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Bout_4> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Bout_3> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Bout_2> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Bout_1> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Bout_0> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_7> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_6> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_5> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_4> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_3> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_2> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_1> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U1/Aout_0> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_7> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_6> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_5> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_4> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_3> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_2> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_1> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out2_0> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_4> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_5> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_6> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/IO_out3_7> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_0> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/Cout_3> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/Cout_2> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/Cout_1> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_7> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_6> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_5> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_4> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_3> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_2> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/IO_out1_1> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/Bout_7> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/Cout_0> (without init value) has a constant value of 0 in block <DCE_Q816>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <U1/MS2_STS_3> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <U1/MS2_STS_2> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <U1/MS2_STS_1> of sequential type is unconnected in block <DCE_Q816>.
+WARNING:Xst:2677 - Node <U1/MS2_STS_0> of sequential type is unconnected in block <DCE_Q816>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DCE_Q816, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DCE_Q816.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 16
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  16  out of    102    15%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.80 secs
+ 
+--> 
+
+Total memory usage is 263640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  178 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+
