@@ -1,0 +1,14 @@
+AR core_ms2 behavioral C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/CORE_MS2.vhd sub00/vhpl03 1559067384
+EN dce_q816 NULL C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/DCE_Q816.vhd sub00/vhpl08 1559067391
+EN logic NULL C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/LOGIC.vhd sub00/vhpl10 1559067387
+EN rom NULL C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/ROM.vhd sub00/vhpl12 1559067389
+AR logic behavioral C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/LOGIC.vhd sub00/vhpl11 1559067388
+AR rom behavioral C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/ROM.vhd sub00/vhpl13 1559067390
+AR dce_q816 behavioral C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/DCE_Q816.vhd sub00/vhpl09 1559067392
+AR ram behavioral C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/RAM.vhd sub00/vhpl05 1556179804
+EN i_o NULL C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/I_O.vhd sub00/vhpl06 1559067385
+EN core_ms2 NULL C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/CORE_MS2.vhd sub00/vhpl02 1559067383
+AR alu behavioral C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/ALU.vhd sub00/vhpl01 1559067382
+EN ram NULL C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/RAM.vhd sub00/vhpl04 1556179803
+AR i_o behavioral C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/I_O.vhd sub00/vhpl07 1559067386
+EN alu NULL C:/Users/ja/Desktop/work/FPGA/projekty/DCEQ816/ALU.vhd sub00/vhpl00 1559067381
